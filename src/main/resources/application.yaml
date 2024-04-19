@@ -1,0 +1,26 @@
+spring:
+  application:
+  name: personal_proj
+  jwt:
+    secret: vmfhaltmskdlstkfkdgodyroqkfwkdbalroqkfwkdbalaaaaaaaaaaaaaaaabbbbb
+
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cafe?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    username:   root
+    password: Tpgns@5196
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true #sql을 log로 보여줌
+    open-in-view: false # 쿼리에서 ui로 값을 보낼때 연속성을 끊음
+    generate-ddl: true # 자동으로 db Table 만들어줌
+    hibernate:
+      ddl-auto: update # update 동작만 하게 함
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8899
+

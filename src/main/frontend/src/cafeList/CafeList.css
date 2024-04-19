@@ -1,0 +1,69 @@
+.cafelist-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f1b784;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.cafelist-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+
+li {
+    background-color: #feefd0; /* Light gray background for each list item */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Slight border for definition */
+    display: list-item;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last item */
+}
+
+.reservation-btn {
+    padding: 8px 16px;
+    background-color: #bf793e; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.reservation-btn:hover {
+    background-color: #f1b784; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+    .cafelist-container {
+        padding: 15px; /* Slightly less padding to allow more space on smaller screens */
+    }
+
+    li {
+        flex-direction: column; /* Stack the elements vertically on smaller screens */
+        align-items: flex-start;
+    }
+
+    .reservation-btn {
+        margin-top: 10px; /* Provide space between the details and the button on smaller screens */
+        width: 100%; /* Full width button for easier tapping */
+    }
+}

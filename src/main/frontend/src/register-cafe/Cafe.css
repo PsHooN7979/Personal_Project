@@ -1,0 +1,89 @@
+/* Base styles for mobile-first approach */
+.registration-container {
+    width: 90%; /* Responsive width for mobile devices */
+    max-width: 500px; /* Maximum width to avoid stretching on larger screens */
+    margin: 40px auto; /* Center the form on the page with automatic margins */
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f1b784; /* Optional: for better contrast */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds depth */
+    border-radius: 8px; /* Optional: softens the edges */
+}
+
+.registration-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group TextField[type="text"],
+.form-group TextField[type="time"],
+.form-group TextField[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px; /* Enhanced readability */
+
+}
+
+.form-group textarea {
+    height: 120px; /* Improved usability for text input */
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #814c23;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button[type="submit"]:hover {
+    background-color: #f1b784;
+}
+
+
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    .registration-container {
+        width: 75%; /* Slightly wider on tablets, but not too wide */
+        max-width: 650px; /* Increased maximum width for larger devices */
+        padding: 30px;
+    }
+
+    .form-group TextField[type="text"],
+    .form-group TextField[type="time"],
+    .form-group textarea,
+    button[type="submit"] {
+        padding: 15px;
+        font-size: 18px; /* Consistent sizing for better interaction */
+    }
+
+    .form-group textarea {
+        height: 150px; /* Larger area for text input */
+    }
+}
+
+/* Further adjustments for even larger screens, if necessary */
+@media (min-width: 1024px) {
+    .registration-container {
+        max-width: 700px; /* Setting a comfortable maximum width for very large screens */
+    }
+}

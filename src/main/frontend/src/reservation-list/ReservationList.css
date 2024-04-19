@@ -1,0 +1,41 @@
+.reservation-list-container {
+    max-width: 800px; /* Optimal width for readability */
+    margin: auto; /* Center the container */
+    padding: 20px;
+    background-color: #f1b784; /* Clear background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Softened edges */
+    font-family: Arial, sans-serif; /* Ensuring a consistent font */
+}
+.reservation-list-container ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+.reservation-list-container li {
+    background-color: #feefd0; /* Light gray background for each list item */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between entries */
+    border-radius: 4px; /* Rounded corners for list items */
+    border: 1px solid #ddd; /* Subtle border */
+    display: flex;
+    justify-content: space-between; /* Space elements nicely */
+    align-items: center;
+    font-size: 16px; /* Larger font for readability */
+}
+
+.reservation-list-container li:last-child {
+    margin-bottom: 0; /* Avoid extra margin on the last item */
+}
+
+@media (max-width: 768px) {
+    .reservation-list-container {
+        padding: 15px;
+        font-size: 14px; /* Slightly smaller font size on smaller devices */
+    }
+
+    .reservation-list-container li {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+}

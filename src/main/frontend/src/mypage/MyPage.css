@@ -1,0 +1,65 @@
+.mypage-container {
+    width: 90%; /* 화면의 90%를 차지하도록 너비 조정 */
+    max-width: 800px; /* 최대 너비는 유지 */
+    margin: auto; /* 상하 자동 마진으로 중앙 정렬 */
+    padding: 20px;
+    box-sizing: border-box; /* 패딩을 포함한 너비로 계산 */
+}
+
+.mypage-container h2, .mypage-container h3 {
+    color: #333;
+    text-align: center; /* 제목을 중앙으로 정렬 */
+}
+
+.user-info, .cafe-list, .reservation-list {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-align: left; /* 모바일 환경에서 텍스트는 왼쪽 정렬이 자연스러움 */
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+button {
+    padding: 10px;
+    width: 100%; /* 모바일 환경에서 버튼은 전체 너비를 차지 */
+    background-color: #814c23;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* 버튼을 블록 요소로 만들어 너비 100% 적용 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+button:hover {
+    background-color: #f1b784;
+    color: black;
+}
+
+/* 데스크탑 환경에 대한 스타일링 */
+@media (min-width: 768px) {
+    .mypage-container {
+        width: 80%; /* 데스크탑에서는 너비를 조금 줄임 */
+    }
+
+    button {
+        width: auto; /* 데스크탑에서는 버튼 너비를 자동으로 조정 */
+        padding: 10px 20px; /* 더 넓은 패딩으로 더 큰 클릭 영역 확보 */
+        display: inline-block; /* 너비를 auto로 설정할 때 필요 */
+    }
+
+    li {
+        text-align: center; /* 데스크탑에서는 항목을 중앙 정렬할 수도 있음 */
+    }
+}

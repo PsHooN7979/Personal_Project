@@ -1,0 +1,141 @@
+.header {
+    margin-bottom: 20px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.navigation a:hover {
+    background-color: #f1b784;
+    border-radius: 20px;
+}
+/* 기본 모바일 스타일링 */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f1b784;
+}
+
+
+
+.navigation a:focus, .search-button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.content-box, .list-box {
+    flex: 1;
+    background-color: #feefd0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.map-section {
+    height: 200px; /* 가정, 실제 맵 API 사용시 조정 필요 */
+    background-color: #feefd0; /* 시각적 구분을 위한 임시 스타일 */
+}
+
+.list-section {
+    background-color: #feefd0;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+
+/* 태블릿 및 데스크탑을 위한 미디어 쿼리 */
+@media (min-width: 768px) {
+    .header-container {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation a {
+        padding: 10px 20px; /* 태블릿 및 데스크탑 화면에서 네비게이션 항목의 패딩 증가 */
+    }
+
+    .navigation a.active {
+        color: #007bff;
+        background-color: #e7f1ff;
+    }
+    .content {
+        flex-direction: column;
+    }
+
+    .content-box, .list-box {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Ensure spacing between sections */
+    }
+
+    .reservation-btn {
+        width: 100%; /* Full width for easier tapping */
+    }
+}
+
+/* 더 큰 화면에 대한 추가 스타일 */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+        display: flex;
+        flex-wrap: wrap; /* 컨테이너 내의 아이템들이 필요에 따라 감싸질 수 있도록 함 */
+        margin: auto;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .search-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content {
+        flex-direction: row; /* 대형 화면에서 .content의 자식들이 수평 정렬되도록 설정 */
+    }
+
+    .map-section, .list-section {
+        flex: 1; /* .map-section과 .list-section이 동일한 비율로 공간을 차지하도록 함 */
+        height: 400px; /* 높이 조정 */
+        margin: 0 10px; /* 좌우 마진으로 공간 추가 */
+    }
+
+    .map-section:first-child, .list-section:last-child {
+        margin-left: 0; /* 첫 번째 자식의 왼쪽 마진 제거 */
+        margin-right: 0; /* 마지막 자식의 오른쪽 마진 제거 */
+    }
+}
